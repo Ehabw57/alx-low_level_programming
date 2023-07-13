@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E c $CFILE 
+gcc -E 0-main.c c
