@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* this funcution only prints the below text*/
+/* main is a fuctions that dose nothig at all*/
 int main(void)
 {
 	char text[] = "\"Programming is like building a multilingual puzzle";
