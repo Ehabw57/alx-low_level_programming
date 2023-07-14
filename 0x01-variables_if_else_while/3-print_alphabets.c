@@ -10,21 +10,20 @@ int main(void)
 {
 	int n = 97;
 	int z = 123;
+	int a = 65;
+        int x = 90;
 
 	while (n != z)
 {
 	putchar(n);
 	n++;
 }
-putchar('\n');
-        int a = 65;
-        int x = 90;
-
         while (a != x)
 {
         putchar(a);
         a++;
 }
+putchar('\n');
 
 return (0);
 }
