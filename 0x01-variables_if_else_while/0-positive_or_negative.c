@@ -1,22 +1,25 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 /**
  * main - is a functiun that prints numer statment
- * RETURN (0) (sucsess)
+ * Return: Always 0 (Success)
  */
-void main(void)
+int main(void)
 {
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX /
+	n = rand() - RAND_MAX / 2;
 		if (n < 0)
+			printf("%i is negative\n", n);
+			else if (n == 0)
 		{
-			printf("%i is negative", n);
-				if else(n = 0)
-				printf("%i is zero", n);
+				printf("%i is zero\n", n);
+		}
 				else
-				printf("%i is positive", n);
+				{
+				printf("%i is positive\n", n);
 		}
 	return (0);
 }
