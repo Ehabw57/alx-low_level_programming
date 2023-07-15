@@ -8,12 +8,12 @@
  */
 int main(void)
 {
-	int n = 0;
-	int z = 10;
+	int n = '0';
+	int z = '9';
 
-	while (n != z)
+	while (n <= z)
 {
-	putchar(n + '0');
+	putchar(n);
 	n++;
 }
 putchar('\n');
