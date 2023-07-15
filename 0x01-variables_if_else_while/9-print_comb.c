@@ -15,9 +15,12 @@ int main(void)
 	while (n <= z)
 {
 	putchar(n);
+	n++;
+	if (n <= z)
+	{
 	putchar(',');
 	putchar(' ');
-	n++;
+	}
 }
 putchar('\n');
 
