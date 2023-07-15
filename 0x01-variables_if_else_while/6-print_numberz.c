@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - is a function that prints nubers form 0 to 9
+ * main - is a function that prints numbers form 0 to 9
  * Return: 0 (success)
  */
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 
 	while (n != z)
 {
-	printf("%d", n);
+	putchar(n + '0');
 	n++;
 }
 putchar('\n');
