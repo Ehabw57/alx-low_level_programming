@@ -3,7 +3,8 @@
 #include <time.h>
 
 /**
- * main - is a function that prints digits from 1 to 9 followed by  alphaber characters from a to f
+ * main - is a function that prints digits
+ * from 1 to 9 followed by  alphaber characters from a to f
  * Return: 0 (success)
  */
 int main(void)
