@@ -15,7 +15,7 @@ int main(void)
 
 	while (n != z)
 {
-	if (n != d, n != q)
+	if (n != d && n != q)
 	{
 		putchar(n);
 	}
