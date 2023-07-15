@@ -17,7 +17,7 @@ int main(void)
 			putchar(fn + '0');
 			putchar(sn + '0');
 			putchar(tn + '0');
-			if (fn == 7 && sn == 8 tn == 9)
+			if (fn == 7 && sn == 8 && tn == 9)
 			{
 				putchar('\n');
 			}
