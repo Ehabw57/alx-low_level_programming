@@ -10,12 +10,12 @@ int main(void)
 {
 	int n = 97;
 	int z = 123;
-	int d = 100;
+	int e = 101;
 	int q = 113;
 
 	while (n != z)
 {
-	if (n != d && n != q)
+	if (n != e && n != q)
 	{
 		putchar(n);
 	}
