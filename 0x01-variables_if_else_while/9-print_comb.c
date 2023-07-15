@@ -4,12 +4,13 @@
 
 /**
  * main - is a function that prints numbers form 0 to 9
+ * whit commas and space
  * Return: 0 (success)
  */
 int main(void)
 {
-	char n = '0';
-	char z = '9';
+	int n = '0';
+	int z = '9';
 
 	while (n <= z)
 {
