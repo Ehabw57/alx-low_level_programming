@@ -5,21 +5,21 @@
  * Return: ussally (0)
  */
 
-int print_sign(int n);
+int print_sign(int n)
 {
 	if (n > 0)
 	{
-		return (1);
 		_putchar('+');
-	}
-	if else(n = 0) 
-	{
 		return (1);
+	}
+	if else(n == 0) 
+	{
 		_putchar('0');
+		return (1);
 	}
 		else(n < 0)
 		{
-		return (-1);
 		_putchar('-');
+		return (-1);
 	}
 }
