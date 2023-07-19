@@ -7,13 +7,16 @@
  */
 
 int main (void)
-	putchr("_");
-	putchr("p");
-	putchr("u");
-	putchr("u");
-	putchr("c");
-	putchr("h");
-	putchr("a");
-	putchr("r");
-	putchr("\n");
+{
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('u');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
+	putchar('\n');
+
 return (0);
+{
