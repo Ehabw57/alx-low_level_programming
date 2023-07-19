@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * _islower - sees if the inter num is an upper
- * @c: is a parameter that recives a value from main
- * or lower cace
+ * _islower - sees if the inter num is an upperor lower case
+ * @c: is a parameter that recives a value from main func
  * Return: ussally (0)
  */
 
