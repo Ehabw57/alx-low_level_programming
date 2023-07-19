@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign - sees if the intered method is bigger or lower or equal zero
+ * _abst - is a function that computes the absolute value of an integer.
  * @n: is a parameter that recives a value from main funciton
  * Return: ussally (0)
  */
