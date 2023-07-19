@@ -1,25 +1,18 @@
 #include "main.h"
 /**
- * print_sign - sees if the intered method is bigger or lower or equal zero
+ * _isalpha - sees if the intered method is an a;phabet or else
  * @c: is a parameter that recives a value from main funciton
  * Return: ussally (0)
  */
 
-int print_sign(int n)
+int _isalpha(int c)
 {
-	if (n > 0)
+	if (c > 64)
 	{
-		_putchar('+');
 		return (1);
 	}
-	else if (n == 0) 
+	else
 	{
-		_putchar('0');
-		return (1);
-	}
-		else (n < 0);
-		{
-		_putchar('-');
-		return (-1);
+		return (0);
 	}
 }
