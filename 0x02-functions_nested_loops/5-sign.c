@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign - sees if the intered method is bigger or lower or equal zero
- * @c: is a parameter that recives a value from main funciton
+ * @n: is a parameter that recives a value from main funciton
  * Return: ussally (0)
  */
 
