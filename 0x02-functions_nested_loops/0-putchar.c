@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- *  * main - type a -putchar 
+ * main - type a -putchar
  *   *
  *    * Return: Always 0.
  */
 
-int main (void)
+int main ( void )
 {
 	putchar('_');
 	putchar('p');
