@@ -5,13 +5,8 @@
  */
 int print_last_digit(int f)
 {
-	if (f < 0 || f > 0)
-	{
-	_putchar(f %10);
-	}
-	else
-	{	
-		_putchar(f);
-	}
-		return (0);
+	int s = f % 10
+	_putchar(s);	
+		
+		return (s);
 }
