@@ -7,7 +7,7 @@ void print_most_numbers(void)
 {
 	int f = 0;
 		while (f < 10)
-		{	
+		{
 			if (f == 2 || f == 4)
 			{
 				f++;
