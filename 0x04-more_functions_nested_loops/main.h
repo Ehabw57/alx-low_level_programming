@@ -1,1 +1,2 @@
-nt _isupper(int c)
+#include <stdio.h>
+int _isupper(int c);
