@@ -5,7 +5,7 @@
 * @c: the variable to check
 * Return: (1) if c id upper (0) id else
 */
-int _isdigit(int c);
+int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{
