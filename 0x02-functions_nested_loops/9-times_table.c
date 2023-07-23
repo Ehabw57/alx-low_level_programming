@@ -3,7 +3,7 @@
 /**
  * times_table - is a function that prints every min of the day
  **/
-void times_table(void);
+void times_table(void)
 {
 	int r, c, v;
 
