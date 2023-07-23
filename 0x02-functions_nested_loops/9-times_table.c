@@ -14,19 +14,19 @@ void times_table(void)
 			v = r * c;
 			if (v > 9)
 			{
-				putchar(v / 10 + '0');
-				putchar(v % 10 + '0');
-				putchar(',');
-				putchar(' ');
+				_putchar(v / 10 + '0');
+				_putchar(v % 10 + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
 			else
 			{
-				putchar(v + '0');
-				putchar(',');
-				putchar(' ');
-				putchar(' ');
+				_putchar(v + '0');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
