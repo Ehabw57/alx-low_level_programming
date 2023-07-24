@@ -6,7 +6,7 @@
  * **/
 void swap_int(int *a, int *b)
 {
-	int arr[00 = {*a};
+	int arr[0] = {*a};
 
 	    *a = *b;
 	    *b = arr[0];
