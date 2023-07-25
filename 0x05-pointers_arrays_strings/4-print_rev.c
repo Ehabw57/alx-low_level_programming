@@ -3,20 +3,16 @@
 * print_rev - is a function that puts a single line of text reversed
 * @s: the line to reverse
 **/
- void print_rev(char *s)
+void print_rev(char *s)
 {
-while(*s != '\0')
-{
-	*s++;
-}
-while(*s >= '\0')
-{
-	*s--;
-	putchar(*s);
-	if(s == " ")
-	{
-		break;
-	}
-}
-putchar('\n');
+	  char *r = s;
+	    while (*r != '\0')
+		        r++;
+	      r--;
+	        while (r >= s)
+			  {
+				      putchar(*r);
+				          r--;
+					    }
+		  putchar('\n');
 }
