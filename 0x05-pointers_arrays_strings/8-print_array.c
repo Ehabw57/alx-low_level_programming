@@ -13,6 +13,8 @@ void print_array(int *a, int n)
 	{
 		if (c == 0)
 			printf("%d", a[c]);
+		else if (c==n)
+			printf(", %d ", a[c]);
 		else
 			printf(", %d", a[c]);
 	}
