@@ -7,7 +7,7 @@ void puts_half(char *str)
 {
 	    int len = 0;
 	        char *r = str;
-		    int i;
+		    int n;
 
 		        /* Determine the length of the string */
 		        while (*str != '\0') {
@@ -16,13 +16,13 @@ void puts_half(char *str)
 						    }
 
 			    /* Output the second half of the string */
-			    int n = (len - 1) / 2;
+			    n = (len - 1) / 2;
 			        if (len % 2 == 0) {
-					        for (i = n; i < len; i++) {
+					        for (int i = n; i < len; i++) {
 							            putchar(*(r + i));
 								            }
 						    } else {
-							            for (i = n + 1; i < len; i++) {
+							            for (int i = n + 1; i < len; i++) {
 									                putchar(*(r + i));
 											        }
 								        }
