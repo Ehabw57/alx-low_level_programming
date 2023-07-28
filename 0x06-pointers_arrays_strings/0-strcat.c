@@ -4,6 +4,7 @@
  * _strcat - a function that copyes tow strings
  * @dest: the one to copy text for
  * @src: the one to copy text from
+ * Return: always dest
  **/
 char *_strcat(char *dest, char *src)
 {
