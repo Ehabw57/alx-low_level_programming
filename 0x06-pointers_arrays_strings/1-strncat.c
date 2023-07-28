@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _strcat - a function that copyes tow strings
+ * *_strcat - a function that copyes tow strings
  * @dest: the one to copy text for
  * @src: the one to copy text from
  * @n: the index to copy
+ * Return: always dest
  **/
 char *_strncat(char *dest, char *src, int n)
 {
@@ -15,7 +16,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 
 	}
-	for (c = 0; c <= n; c++)
+	for (c = 0; c <= n - 1; c++)
 	{
 		    dest[i] = src[c];
 		    i++;
