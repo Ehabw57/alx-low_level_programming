@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcat - a function that copyes tow strings
+ * *_strncat - a function that copyes tow strings
  * @dest: the one to copy text for
  * @src: the one to copy text from
  * @n: the index to copy
