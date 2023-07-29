@@ -1,31 +1,25 @@
 #include "main.h"
 
 /**
- * *_strncpy - a function that copyes tow strings
- * @dest: the one to copy text for
- * @src: the one to copy text from
- * @n: the index to copy
- * Return: always dest
+ * _strcmp - a function that compare  tow strings
+ * @s1: the firest string
+ * @s2: the sec string
+ * Return: 0 if s1 equals s2
+ *	s1 - s2 if else
  **/
 int _strcmp(char *s1, char *s2)
 {
-	    int i, j;
-	        
-	        for (i = 0; s1[i] != '\0'; i++)
-		{
-			    
-		}
-		    for (j = 0; s2[j] != '\0'; j++)
-		    {
-			        
-		    }
-		        if (i == j) {
-				        return 0;
-					    }
-			    else if (i < j) {
-				            return -15;
-					        }
-			        else {
-					        return 15;
-						    }
+	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
+	{
+		s1++;
+		s2++
+	}
+	if (*s1 == s2)
+	{
+		return (0);
+	}
+	else
+	{
+		return (*s1 - *s2);
+	}
 }
