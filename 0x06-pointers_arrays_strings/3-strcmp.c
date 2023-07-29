@@ -7,20 +7,25 @@
  * @n: the index to copy
  * Return: always dest
  **/
-int my_strcmp(const char *s1, const char *s2)
+int _strcmp(const char *s1, const char *s2)
 {
-    while (*s1 && (*s1 == *s2)) {
-        s1++;
-        s2++;
-    }
-
-    if (*s1 == *s2) {
-        return 0;
-    }
-    else if (*s1 < *s2) {
-        return -15;
-    }
-    else {
-        return 15;
-    }
+	    int i, j;
+	        
+	        for (i = 0; s1[i] != '\0'; i++)
+		{
+			    
+		}
+		    for (j = 0; s2[j] != '\0'; j++)
+		    {
+			        
+		    }
+		        if (i == j) {
+				        return 0;
+					    }
+			    else if (i < j) {
+				            return -15;
+					        }
+			        else {
+					        return 15;
+						    }
 }
