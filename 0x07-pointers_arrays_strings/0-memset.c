@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * *_memset - this func prints some text in the memory block
@@ -10,6 +10,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 int i;
+
 
 for (i = 0; i < n; i++)
 {
