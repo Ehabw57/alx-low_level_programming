@@ -5,6 +5,7 @@
  *@s: the pointer that points to buffer
  *@b: the text to be printed
  *@n: the times to print
+ *Return: always return s
  **/
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -15,4 +16,5 @@ for (i = 0; i < n; i++)
 	*s = b;
 	s++;
 }
+return (s);
 }
