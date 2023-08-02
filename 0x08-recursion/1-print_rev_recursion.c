@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * _puts_recursion - puts function with recurion way
+ * _print_rev_recursion - this function peints the string in reverse
  *@s: the string to put
  **/
 void _print_rev_recursion(char *s)
 {
 	if (*s != '\0')
 	{
-		s++;
-		_print_rev_recursion(s);
+		_print_rev_recursion(s + 1);
 		_putchar(*s);
 	}
 }
