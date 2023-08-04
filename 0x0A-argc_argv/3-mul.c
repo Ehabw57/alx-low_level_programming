@@ -11,7 +11,7 @@ int main(int c, char *s[])
 c -= 1;
 if (c != 2)
 {
-printf("Error");
+printf("Error\n");
 }
 else
 {
