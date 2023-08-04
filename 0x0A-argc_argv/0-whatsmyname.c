@@ -7,6 +7,7 @@
  **/
 int main(int c, char *v[])
 {
+(void)c;
 printf("%s\n", v[0]);
 return (0);
 }
