@@ -10,6 +10,6 @@
 int main(int c, char *s[])
 {
 (void)s;
-printf("%i\n", c);
+printf("%i\n", c - 1);
 return (0);
 }
