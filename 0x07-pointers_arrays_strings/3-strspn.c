@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * _strspn - this functon take tow pointes to strings then compare both
  * @s: the first ponter 
