@@ -1,22 +1,26 @@
 #include "main.h"
 /**
  * _strspn - this functon take tow pointes to strings then compare both
- * @s: the first ponter 
+ * @s: the first ponter
  * @accept: the sec one
  * Return: always counter
 */
-unsigned int _strspn(char *s, char *accept) 
+unsigned int _strspn(char *s, char *accept)
 {
 int counter = 0;
 char *a;
 
+ if (s == NULL || accept == NULL)
+ {
+ return 0;
+ }
 while (*s != 0)
 {
 
 for (a = accept; *a != '\0'; a++)
 {
-if (*a == *s )
-{ 
+if (*a == *s)
+{
 counter++;
 break;
 }
