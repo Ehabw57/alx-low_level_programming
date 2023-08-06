@@ -9,23 +9,23 @@ int r, c, v;
 
 for (r = 0; r <= 9; r++)
 {
-putchar('0');
+_putchar('0');
 for (c = 1; c <= 9; c++)
 {
 v = r * c;
-putchar(',');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
 if (r * c < 10)
 {
-putchar(' ');
-putchar(v + '0');
+_putchar(' ');
+_putchar(v + '0');
 }
 else
 {
-putchar(v / 10 + '0');
-putchar(v % 10 + '0');
+_putchar(v / 10 + '0');
+_putchar(v % 10 + '0');
 }
 }
-putchar('\n');
+_putchar('\n');
 }
 }

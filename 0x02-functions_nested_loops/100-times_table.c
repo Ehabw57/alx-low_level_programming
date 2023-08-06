@@ -5,6 +5,7 @@
 * @n: the variable to print its time table
 * Return: 0 if n is greater than 15 or less than 0
 **/
+
 void print_times_table(int n)
 {
 int i, j, r;
@@ -13,33 +14,24 @@ if (n > 15 || n < 0)
 {
 return;
 }
+
 for (i = 0; i <= n; i++)
 {
-_putchar('0');
+printf("0");
 for (j = 1; j <= n; j++)
 {
 r = i * j;
-_putchar(',');
-_putchar(' ');
+printf(",  ");
 if (r < 10)
 {
-_putchar(' ');
-_putchar(' ');
-_putchar(r + '0');
+printf("  ");
 }
-else if (r < 100 && r > 9)
+else if (r < 100)
 {
-_putchar(' ');
-_putchar(r / 10 + '0');
-_putchar(r % 10 + '0');
+printf(" ");
 }
-else
-{
-_putchar(r / 100 + '0');
-_putchar((r / 10) * r % 10 + '0');
-_putchar(r % 10 + '0');
+printf("%d", r);
 }
-}
-putchar('\n');
+printf("\n");
 }
 }
