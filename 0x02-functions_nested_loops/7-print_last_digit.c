@@ -6,16 +6,19 @@
  * @f: the variable to print its last digit
  * Return: Alwyas s
  **/
-int print_last_digit(int f)
+int print_last_digit(int n)
 {
-	int s;
-		if (f < 0)
-	{
-		f = f * -1;
-	}
-	s = f % 10;
+	int i;
 
-	_putchar(s + '0');
+	if (n < 0)
+		n = -n;
 
-	return (s);
+	i = n % 10;
+
+	if (i < 0)
+		i = -i;
+
+	_putchar(i + '0');
+
+	return (i);
 }
