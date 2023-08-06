@@ -21,7 +21,7 @@ printf("0");
 for (j = 1; j <= n; j++)
 {
 r = i * j;
-printf(",  ");
+printf(", ");
 if (r < 10)
 {
 printf("  ");
@@ -34,4 +34,4 @@ printf("%d", r);
 }
 printf("\n");
 }
-}
+} 
