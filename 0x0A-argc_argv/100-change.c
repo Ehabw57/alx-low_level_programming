@@ -49,4 +49,5 @@ r -= 1;
 counter++;
 }
 printf("%i\n", counter);
+return (0);
 }
