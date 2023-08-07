@@ -37,6 +37,9 @@ int main(int argc, char *argv[])
     printf("%i\n", counter);
   }
   else 
+  {
        printf("0\n");
     return (0);
+  }
+  return (0);
 }
