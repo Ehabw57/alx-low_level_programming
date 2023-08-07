@@ -2,11 +2,11 @@
 #include <stdlib.h>
 /**
 * main - the function should multi tow passed arg
-* @c: the counter of  arg
+* @argc: the countecoins of  arg
 * @s: the argv string
 * Return: always 0
 */
-int main(int c, char *s[])
+int main(int c, chacoins *s[])
 {
 c -= 1;
 if (c != 2)

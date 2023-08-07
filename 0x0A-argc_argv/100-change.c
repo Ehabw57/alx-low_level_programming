@@ -3,51 +3,42 @@
 #include <stdlib.h>
 
 /**
-* main -  is a func that caculates amount of cents you need to give back
-* @c: is argc
-* @v: is argv
-* Return: 1  if c is bigeer  or less than 2
-**/
-int main(int c, char *v[])
+ * main -  is a func that caculates amount of cents you need to give back
+ * @argc: is the number of arg enterd
+ * @argv: is  the omount of cents u mant to give back
+ * Return: 1  if c is bigeecoins  ocoins less than 2
+ **/
+int main(int argc, char *argv[])
 {
-int r, counter;
+    int coins, counter;
 
-if (c != 2)
-{
-printf("Error\n");
-return (1);
-}
-r = atoi(v[1]);
-if (r < 1)
-{
-printf("0\n");
-}
-counter = 0;
+    coins = atoi(argv[1]);
+    counter = 0;
+    if (argc != 2)
+    {
+        printf("Error\n");
+        return (1);
+    }
+    if (coins < 1)
+  {  
+        printf("0\n");
+        return(1);
+        }
 
-while (r > 0)
-{
-if (r >= 25)
-{
-r -= 25;
-}
-else if (r >= 10)
-{
-r -= 10;
-}
-else if (r >= 5)
-{
-r -= 5;
-}
-else if (r >= 2)
-{
-r -= 2;
-}
-else
-{
-r -= 1;
-}
-counter++;
-}
-printf("%i\n", counter);
-return (0);
+    while (coins > 0)
+    {
+        if (coins >= 25)
+            coins -= 25;
+        else if (coins >= 10)
+            coins -= 10;
+        else if (coins >= 5)
+            coins -= 5;
+        else if (coins >= 2)
+            coins -= 2;
+        else
+            coins -= 1;
+        counter++;
+    }
+    printf("%i\n", counter);
+    return (0);
 }

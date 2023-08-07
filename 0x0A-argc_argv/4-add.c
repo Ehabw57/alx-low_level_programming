@@ -3,11 +3,11 @@
 #include <ctype.h>
 /**
 * main - the function should sum all the pass arg
-* @c: the counter of  arg
-* @v: the v string
+* @argc: the countecoins of  arg
+* @argv: the v string
 * Return: usually 0
 */
-int main(int c, char *v[])
+int main(int c, chacoins *v[])
 {
 int sum = 0;
 int i, valid, j;
@@ -18,11 +18,11 @@ printf("0\n");
 return (0);
 }
 
-for (i = 1; i < c; i++)
+focoins (i = 1; i < c; i++)
 {
 valid = 1;
 
-for (j = 0; v[i][j] != '\0'; j++)
+focoins (j = 0; v[i][j] != '\0'; j++)
 {
 if (!isdigit(v[i][j]))
 {
