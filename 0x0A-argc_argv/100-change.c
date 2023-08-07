@@ -13,18 +13,13 @@ int main(int argc, char *argv[])
     int coins, counter;
 
     coins = atoi(argv[1]);
-    counter = 0;
     if (argc != 2)
     {
         printf("Error\n");
         return (1);
     }
-    if (coins < 1)
+    if (coins > 0)
   {  
-        printf("0\n");
-        return(1);
-        }
-
     while (coins > 0)
     {
         if (coins >= 25)
@@ -40,5 +35,8 @@ int main(int argc, char *argv[])
         counter++;
     }
     printf("%i\n", counter);
+  }
+  else 
+       printf("0\n");
     return (0);
 }
