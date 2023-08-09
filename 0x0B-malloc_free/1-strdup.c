@@ -1,9 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- *
- *
- *
+ * *_strdup - unction returns a pointer to a new string
+ * which is a duplicate of the string
+ * @str: is the given string to dub
+ * Return: NULL if str is NULL or ptr is NULL
+ * return ptr else
  **/
 char *_strdup(char *str)
 {
