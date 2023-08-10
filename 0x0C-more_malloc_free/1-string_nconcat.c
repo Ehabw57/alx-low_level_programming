@@ -13,25 +13,25 @@ int _strlen(char *s1)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
  {
-     int len1, len2;
-     int i, j;
+    unsigned int len1, len2;
+   unsigned  int i, j;
      char *ptr;
- if (*s1 == NULL) // if NULL is passed, treat it as an empty string
+ if (s1 == NULL)
  {
-     *s1 = "";
+     s1 = "";
  }
-  if (*s2 == NULL) // if NULL is passed, treat it as an empty string
+  if (s2 == NULL)
  {
-     *s2 = "";
+     s2 = "";
  }
      len1 = _strlen(s1);
      len2 = _strlen(s2);
-if (len2 <= n) // If n is greater or equal to the length of s2 then use the entire string s2
+if (len2 <= n)
 {
     n = len2;
 }
 ptr = malloc(sizeof(char) * (len1 + len2));
-if (ptr == NULL) // If the function fails, it should return NULL
+if (ptr == NULL)
 {
     return (NULL);
 }
