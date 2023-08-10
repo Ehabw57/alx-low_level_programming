@@ -30,7 +30,7 @@ if (len2 <= n)
 {
     n = len2;
 }
-ptr = malloc(sizeof(char) * (len1 + len2));
+ptr = malloc(sizeof(char) * (len1 + n + 1));
 if (ptr == NULL)
 {
     return (NULL);
