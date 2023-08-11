@@ -21,7 +21,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	j = 0;
-	for (i = min; i < max; i++)
+	for (i = min; i <= max; i++)
 	{
 		ptr[j] = i;
 		j++;
