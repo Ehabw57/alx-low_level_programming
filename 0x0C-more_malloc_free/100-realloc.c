@@ -17,7 +17,13 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
+/**
+ * *_realloc - is a func that reallocates a memory block using malloc and free
+ * @old_size: is the old allocated size
+ * @new_size: is the new size to be allocated
+ * @ptr: the pointer to allocte memory for
+ * Return: ptr uassally
+*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *ptr2;
