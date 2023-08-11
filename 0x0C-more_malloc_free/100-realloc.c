@@ -1,11 +1,33 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * *_memcpy - this copy  some text in the memory block to another blick
+ *@dest: the member to copy to
+ *@src: the mrmrber to copu from
+ *@n: the times to print
+ *Return: always return dest
+ **/
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		*(dest + i) = *(src + i);
+	}
+	return (dest);
+}
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *ptr2;
 	unsigned int i;
 
+	if (ptr == NULL)
+	{
+		ptr = malloc(new_size);
+		return (ptr);
+	}
 	if (old_size == new_size)
 	{
 		return (ptr);
@@ -17,27 +39,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	if (new_size > old_size)
-	{
 		ptr2 = malloc(sizeof(char) * new_size);
+		_memcpy(ptr2, ptr, old_size);
+		free(ptr);
+		return (ptr2);
 
-		for (i = 0; i < old_size; i++)
-		{
-			((char *)ptr2)[i] = ((char *)ptr)[i];
-		}
-		free(ptr);
-		return (ptr2);
-	}
-	if (new_size < old_size)
-	{
-		ptr2 = malloc(sizeof(char) * new_size);
-		for (i = 0; i < new_size; i++)
-		{
-			((char *)ptr2)[i] = ((char *)ptr)[i];
-		}
-		free(ptr);
-		return (ptr2);
-	}
-	ptr = malloc(new_size);
-	return (ptr);
 }
