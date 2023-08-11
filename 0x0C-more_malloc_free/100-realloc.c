@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdlib.h> 
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 void *ptr2;
-int i;
+unsigned int i;
 
 if (ptr == NULL) 
 {
@@ -45,4 +45,5 @@ for (i = 0; i < new_size; i++)
 free(ptr);
 return(ptr2);
 }
+return (ptr);
 }
