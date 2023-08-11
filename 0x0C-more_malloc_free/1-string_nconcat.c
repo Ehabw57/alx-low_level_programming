@@ -40,10 +40,19 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	return (dest);
 }
+/**
+ * *string_nconcat - return a pointer which contains s1,
+ * followed by the first n bytes of s2, and null terminated
+ * @s1: the first string
+ * @n: the number of index to copy
+ * @s2: the string to copy 'n' indexes from
+ * Return: NULL If the function fails
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *result;
+	char *ptr;
 	unsigned int len1, len2;
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -62,15 +71,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = len2;
 	}
 
-	result = malloc(sizeof(char) * (len1 + n + 1));
-	if (result == NULL)
+	ptr = malloc(sizeof(char) * (len1 + n + 1));
+	if (ptr == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
-	_strncpy(result, s1, len1);
-	_strncpy(result + len1, s2, n);
-	result[len1 + n] = '\0';
+	_strncpy(ptr, s1, len1);
+	_strncpy(ptr + len1, s2, n);
+	ptr[len1 + n] = '\0';
 
-	return result;
+	return (ptr);
 }
