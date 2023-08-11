@@ -1,20 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
-
-int _strlen(char *s1)
-{
-int i = 0;
- while (s1[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
+#include <string.h>
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
  {
     unsigned int len1, len2;
-   unsigned  int i, j;
+ 
      char *ptr;
  if (s1 == NULL)
  {
@@ -24,27 +15,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  {
      s2 = "";
  }
-     len1 = _strlen(s1);
-     len2 = _strlen(s2);
-if (len2 <= n)
-{
-    n = len2;
-}
+     len1 = strlen(s1);
+     len2 = strlen(s2);
+ if (n >= len2) 
+ {
+        n = len2;
+    }
 ptr = malloc(sizeof(char) * (len1 + n + 1));
-if (ptr == NULL)
-{
-    return (NULL);
-}
-for (i = 0; i < len1; i++)
-{
-    ptr[i] = s1[i];
-}
-for (j = 0; j < n; j++)
-{
-    ptr[i + j] = s2[j];
-}
-ptr[i + j + 1] = '\0';
-
+ ptr = strncpy(ptr, s1, len1);
+ ptr = strncpy(ptr + len1, s1, n);
+ptr[n + len1] ='\0';
 return (ptr);
  }
  
