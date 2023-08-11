@@ -21,7 +21,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *ptr2;
-	unsigned int i;
 
 	if (ptr == NULL)
 	{
