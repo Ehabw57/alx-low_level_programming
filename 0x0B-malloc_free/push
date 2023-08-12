@@ -1,6 +1,0 @@
-#!/bin/bash
-git add *
-echo "please enter yout commit messege"
-read var
-git commit -m "$var"
-git push
