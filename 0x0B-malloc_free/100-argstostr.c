@@ -49,12 +49,12 @@ char *argstostr(int ac, char **av)
         return (NULL);
     }
 
-    for (i = 0; i < ac - 1; i++)
+    for (i = 0; i < ac; i++)
     {
     len += _strlen(av[i]);
     }
 
-    len += ac;
+    len += ac + i + 1;
     ptr = malloc(sizeof(char) * len);
     
     if (ptr == NULL)
