@@ -15,7 +15,7 @@ int _strlen(char *s)
 		s++;
 		len++;
 	}
-	return (len);
+	return (len + 1);
 }
 /**
  * _strcpy - copyes a src to dest
@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ptr == NULL)
 		return (NULL);
 
-	ptr->name = malloc(_strlen(name));
+	ptr->name = malloc(sizeof(char) * _strlen(name));
 
 	if (ptr->name == NULL)
 	{
@@ -56,7 +56,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	ptr->owner = malloc(_strlen(owner));
+	ptr->owner = malloc(sizeof(char) * _strlen(owner));
 
 	if (ptr->owner == NULL)
 	{
