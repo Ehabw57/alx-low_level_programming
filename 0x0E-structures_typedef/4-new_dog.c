@@ -13,7 +13,7 @@ int _strlen(char *s)
 	while (s[len] != '\0')
 		len++;
 
-	return (len + 1);
+	return (len);
 }
 /**
  * _strcpy - copyes a src to dest
