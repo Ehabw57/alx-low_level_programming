@@ -4,12 +4,15 @@
 /**
  * sum_them_all - a func that sums all the given numbers
  * @n: number of numbers passed
- * Return: always r
-*/
+ * Return: r if sucsees or 0 if fails
+ */
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list nptr;
 	int i = 0, r;
+
+	if (n == 0)
+		return (0);
 
 	va_start(nptr, n);
 	while (i < n)
