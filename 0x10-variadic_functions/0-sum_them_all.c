@@ -9,7 +9,8 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list nptr;
-	int i = 0, r;
+	unsigned int i = 0;
+	int r = 0;
 
 	if (n == 0)
 		return (0);
@@ -17,6 +18,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(nptr, n);
 	while (i < n)
 	{
+
 		r += va_arg(nptr, int);
 		i++;
 	}
