@@ -83,7 +83,6 @@ void print_all(const char *const format, ...)
 			}
 			idx++;
 		}
-		
 		j++;
 	}
 	printf("\n");
