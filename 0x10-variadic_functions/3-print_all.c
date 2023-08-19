@@ -78,11 +78,12 @@ void print_all(const char *const format, ...)
 				printf("%s", sp);
 				ptrf = arr[idx].ptr;
 				ptrf(Ilist);
+				sp = ", ";
 				break;
 			}
 			idx++;
 		}
-		sp = ", ";
+		
 		j++;
 	}
 	printf("\n");
