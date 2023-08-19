@@ -37,11 +37,7 @@ void ps(va_list Ilist)
 {
 	char *str = va_arg(Ilist, char *);
 
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
+
 
 	printf("%s", str);
 }
