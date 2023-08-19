@@ -37,7 +37,11 @@ void ps(va_list Ilist)
 {
 	char *str = va_arg(Ilist, char *);
 
-
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
 
 	printf("%s", str);
 }
@@ -51,6 +55,7 @@ void print_all(const char *const format, ...)
 	int idx;
 	int j = 0;
 	char r[1];
+	char *sp = "";
 	void (*ptrf)(va_list args);
 	print arr[5] = {
 		{"i", pi},
@@ -70,14 +75,14 @@ void print_all(const char *const format, ...)
 			r[1] = '\0';
 			if (strcmp(arr[idx].c, r) == 0)
 			{
+				printf("%s", sp);
 				ptrf = arr[idx].ptr;
 				ptrf(Ilist);
-				if (format[j + 1] != '\0')
-					printf(", ");
 				break;
 			}
 			idx++;
 		}
+		sp = ", ";
 		j++;
 	}
 	printf("\n");
