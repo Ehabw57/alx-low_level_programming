@@ -8,9 +8,10 @@ void free_list(list_t *head)
 	list_t *move;
 	list_t *Free;
 
-	Free = head;
+	
 	if (head != NULL)
 	{
+		Free = head;
 		move = head;
 
 		while (move->next != NULL)
@@ -20,7 +21,7 @@ void free_list(list_t *head)
 			free(Free);
 			Free = move;
 		}
+		free(Free->str);
+		free(Free);
 	}
-	free(Free->str);
-	free(Free);
 }
