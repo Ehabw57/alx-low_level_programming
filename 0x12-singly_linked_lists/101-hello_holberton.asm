@@ -9,4 +9,4 @@
     mov  ah, 0x4c     
     int  0x21         
 
-    msg  db 'Hello, World!', 0x0d, 0x0a, '$'  
+    msg  db 'Hello, Holberton', 0x0d, 0x0a, '$'  
