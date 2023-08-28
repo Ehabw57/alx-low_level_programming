@@ -7,7 +7,7 @@
 size_t listint_len(const listint_t *h)
 {
 	const listint_t *move;
-	unsigned int i;
+	unsigned int i = 0;
 
 	if (h == NULL)
 	{
