@@ -11,8 +11,8 @@ void print_binary(unsigned long int n)
 	{
 		if (n >> 1 != 0)
 			print_binary((n >> 1));
-		printf("%i", r);
+		_putchar(r + '0');
 	}
 	else
-		printf("0");
+		_putchar(r + '0');
 }
