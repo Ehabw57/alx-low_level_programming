@@ -4,16 +4,12 @@
  * @n: the num to set
  * @index: the index to reach to
  * Return: the value of bit
-*/
+ */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int r = (*n >> index);
-
-	if (index > 64)
+	if (index > sizeof(unsigned long int) * 8)
 		return (-1);
-	*n = (*n >> index);
-	*n = (*n | 1);
-	*n = (*n << index);
 
-	return (r & 1);
+	*n = (*n | (1 << index));
+	return (1);
 }
