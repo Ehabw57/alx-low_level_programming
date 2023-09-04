@@ -7,7 +7,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
     unsigned int count;
 
     fd = open(filename, O_RDONLY);
-    if (fd < 0)
+    if (fd < 0 || filename == NULL)
         return (0);
 
     while ((b = read(fd, &c, sizeof(c)) > 0) && count < letters)
