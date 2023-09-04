@@ -9,7 +9,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	int fd;
-	unsigned int count;
+	unsigned int count, actc;
 
 	if (filename == NULL)
 		return (0);
@@ -17,12 +17,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	buf = malloc(sizeof(char) * letters);
 
-	if (buf == NULL || fd < 1)
+	if (buf == NULL || fd < 0)
+	{
+		free(buf);
 		return (0);
+	}
 
 	count = read(fd, buf, letters);
-	write(1, buf, count);
+	actc = write(1, buf, count);
 	free(buf);
 
-	return (count);
+	if (count != actc)
+		return (0);
+
+	return (actc);
 }
