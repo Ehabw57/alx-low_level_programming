@@ -7,28 +7,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buf;
 	int fd;
-	unsigned int count, actc;
-
-	if (filename == NULL)
-		return (0);
+	char c;
+	int b;
+	size_t count = 0;
 
 	fd = open(filename, O_RDONLY);
-	buf = malloc(sizeof(char) * letters);
+	if (fd < 0)
+		return (0);
 
-	if (buf == NULL || fd < 0)
+	while ((b = read(fd, &c, sizeof(c))) > 0 && count < letters)
 	{
-		free(buf);
-		return (0);
+		write(1, &c, sizeof(c));
+		count++;
 	}
-
-	count = read(fd, buf, letters);
-	actc = write(1, buf, count);
-	free(buf);
-
-	if (count != actc)
-		return (0);
-
-	return (actc);
+	close(fd);
+	return (count);
 }
