@@ -1,38 +1,28 @@
 #include "main.h"
-
+/**
+ * append_text_to_file - a function that append new text contet to the file
+ * @filename: the name of the file
+ * @text_content: the content to add to the new file
+ * Return: 1 on success -1 on fails
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
-    /**
-     * check if filename is not null
-     * int fd;
-     * fd = open(filename,o_append|Rw)
-     * check if fd is not -1
-     * if (text_cont != NULL)
-     * {
-     * wr = write(fd,text_content, stlenr(text_content))
-     * check wr if
-     * }
-     * return (1)
-     *
-     */
-    int fd, wr;
+	int fd, wr;
 
-    if (filename == NULL)
-        return (-1);
+	if (filename == NULL)
+		return (-1);
 
-    fd = open(filename, O_APPEND | O_WRONLY);
-    if (fd < 0)
-        return (-1);
+	fd = open(filename, O_APPEND | O_WRONLY);
 
-    if (text_content != NULL)
-    {
-        wr = write(fd, text_content, strlen(text_content));
-        if (wr < 0)
-        {
-            close(fd);
-            return (-1);
-        }
-    }
-    close(fd);
-    return (1);
+	if (text_content != NULL)
+	{
+		wr = write(fd, text_content, strlen(text_content));
+		if (fd < 0 || wr < 0)
+		{
+			close(fd);
+			return (-1);
+		}
+	}
+	close(fd);
+	return (1);
 }
