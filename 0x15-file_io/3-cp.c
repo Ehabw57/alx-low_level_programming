@@ -33,11 +33,10 @@ int cp(char *file_from, char *file_to)
 		dprintf(2, "Error: Cant close %i\n", fd2);
 		exit(100);
 	}
+	return (0);
 }
 int main(int ac, char **av)
 {
-	int n;
-
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
