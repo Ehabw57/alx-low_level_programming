@@ -8,9 +8,7 @@ int cp(char *file_from, char *file_to)
 	fd1 = open(file_from, O_RDONLY);
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
-	while ((
-		
-	) > 0)
+	while ((r = read(fd1, buf, 1024)) > 0)
 	{
 		if (fd1 < 0 || r < 0)
 		{
