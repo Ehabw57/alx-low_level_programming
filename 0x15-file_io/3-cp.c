@@ -2,14 +2,15 @@
 #include "main.h"
 void cp(char *file_from, char *file_to)
 {
-	int fd1, fd2, r, w, c1, c2;
+	int fd1, fd2, r = 0, w, c1, c2;
 	char buf[1024];
 
 	fd1 = open(file_from, O_RDONLY);
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
-	while ((r = read(fd1, buf, 1024)) > 0)
+	while (r >= 0)
 	{
+		r = read(fd1, buf, 1024);
 		if (fd1 < 0 || r < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
