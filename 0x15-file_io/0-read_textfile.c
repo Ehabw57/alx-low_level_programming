@@ -7,9 +7,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fd, b;
 	char c;
-	int b;
 	size_t count = 0;
 
 	if (filename == NULL)
@@ -18,11 +17,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd < 0)
 		return (0);
 
-	while ((b = read(fd, &c, sizeof(c))) > 0 && count < letters)
-	{
+	for (; (b = read(fd, &c, sizeof(c))) > 0 && count < letters; count++)
 		write(STDOUT_FILENO, &c, sizeof(c));
-		count++;
-	}
 	close(fd);
 	return (count);
 }
