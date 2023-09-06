@@ -2,46 +2,33 @@
 #include "main.h"
 void cp(char *file_from, char *file_to)
 {
-	int fd1, fd2, r = 1, w, c1, c2;
+	int fd1, fd2, r = 1, w;
 	char buf[1024];
 
 	fd1 = open(file_from, O_RDONLY);
-	if (fd1 < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
-
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fd2 < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
 
 	while ((r = read(fd1, buf, 1024)) != 0)
 	{
-		if (r < 0)
+		if (r < 0 || fd1 < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
 		w = write(fd2, buf, r);
-		if (w < 0)
+		if (w < 0 || fd2 < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
 
-	c1 = close(fd1);
-	if (c1 < 0)
+	if (close(fd1))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1);
 		exit(100);
 	}
-	c2 = close(fd2);
-	if (c2 < 0)
+	if (close(fd2))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2);
 		exit(100);
