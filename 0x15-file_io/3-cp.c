@@ -2,7 +2,7 @@
 #include "main.h"
 void cp(char *file_from, char *file_to)
 {
-	int fd1, fd2, r , w, c1, c2;
+	int fd1, fd2, r = 1, w, c1, c2;
 	char buf[1024];
 
 	fd1 = open(file_from, O_RDONLY);
@@ -15,11 +15,11 @@ void cp(char *file_from, char *file_to)
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 
-	while ((r = read(fd1, buf, 1024)) > 0)
+	while ((r = read(fd1, buf, 1024)) != 0)
 	{
 		if (r < 0)
 		{
@@ -29,10 +29,11 @@ void cp(char *file_from, char *file_to)
 		w = write(fd2, buf, r);
 		if (w < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
+
 	c1 = close(fd1);
 	if (c1 < 0)
 	{
