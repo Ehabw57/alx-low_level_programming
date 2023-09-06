@@ -8,16 +8,15 @@ void cp(char *file_from, char *file_to)
 	fd1 = open(file_from, O_RDONLY);
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
-	while (r >= 0)
+	while ((r = read(fd1, buf, 1024)) > 0)
 	{
-		r = read(fd1, buf, 1024);
 		if (fd1 < 0 || r < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
-		w = write(fd2, buf, r);
-		if (fd2 < 0 || w < 0)
+		
+		if (fd2 < 0 || (w = write(fd2, buf, r)) < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 			exit(99);
