@@ -1,6 +1,6 @@
 
 #include "main.h"
-int cp(char *file_from, char *file_to)
+void cp(char *file_from, char *file_to)
 {
 	int fd1, fd2, r, w, c1, c2;
 	char buf[1024];
@@ -12,35 +12,35 @@ int cp(char *file_from, char *file_to)
 	{
 		if (fd1 < 0 || r < 0)
 		{
-			dprintf(2, "Error: Can't read from file %s\n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
 		w = write(fd2, buf, r);
 		if (fd2 < 0 || w < 0)
 		{
-			dprintf(2, "Error: Can't write to file %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 			exit(99);
 		}
 	}
 	c1 = close(fd1);
 	if (c1 < 0)
 	{
-		dprintf(2, "Error: Cant close fd %i\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Cant close fd %i\n", fd1);
 		exit(100);
 	}
 	c2 = close(fd2);
 	if (c2 < 0)
 	{
-		dprintf(2, "Error: Cant close fd %i\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Cant close fd %i\n", fd2);
 		exit(100);
 	}
-	return (0);
+
 }
 int main(int ac, char **av)
 {
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	cp(av[1], av[2]);
