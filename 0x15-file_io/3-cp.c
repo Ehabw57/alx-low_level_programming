@@ -1,5 +1,10 @@
 
 #include "main.h"
+/**
+ * cp - copys content of file_from to file_to
+ * @file_from: the file to copy contntens from
+ * @file_to: the file to paste contents to
+ */
 void cp(char *file_from, char *file_to)
 {
 	int fd1, fd2, r = 1, w;
@@ -15,25 +20,23 @@ void cp(char *file_from, char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
+
 		w = write(fd2, buf, r);
 		if (w < 0 || fd2 < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			exit(99);
-		}
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to), exit(99);
 	}
 
 	if (close(fd1))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1), exit(100);
 	if (close(fd2))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2), exit(100);
 }
+/**
+ * main - test the function
+ * @ac: the number of args passed
+ * @av: the args passed
+ * Return: Always 0
+ */
 int main(int ac, char **av)
 {
 	if (ac != 3)
