@@ -3,11 +3,12 @@
  * *cap_string - convert each first char of word to cap
  * @sorce: The string to cap
  * Return: caped sorce or NULL if sorce = NULL
-*/
+ */
 char *cap_string(char *sorce)
 {
 	/*detrmine an array to word seprator*/
-	char sep[] = {'\t',
+	char sep[] = {'\n',
+				  '\t',
 				  ' ',
 				  ',',
 				  ';',
