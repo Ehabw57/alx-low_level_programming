@@ -28,6 +28,9 @@ char *cap_string(char *sorce)
 	/*make nested loop for both source and array sep*/
 	while (sorce[i] != '\0')
 	{
+		if (sorce[0] > 96 && sorce[0] < 123)
+			sorce[0] -= 32;
+
 		for (j = 0; sep[j] != '\0'; j++)
 		{
 			if (sorce[i] == sep[j])
@@ -35,8 +38,8 @@ char *cap_string(char *sorce)
 				/*if you match an asccie from 97 to 122 */
 				if (sorce[i + 1] > 96 && sorce[i + 1] < 123)
 				{
-					/*convert the next char in to cap*/
-					sorce[i + 1] -= 32;
+					sorce[i + 1] -= 32; /*convert the next char in to cap*/
+					break;
 				}
 			}
 		}
@@ -44,3 +47,4 @@ char *cap_string(char *sorce)
 	}
 	return (sorce);
 }
+
