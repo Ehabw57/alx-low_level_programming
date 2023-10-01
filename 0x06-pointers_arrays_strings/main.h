@@ -10,3 +10,4 @@ char *string_toupper(char *str);
 char *cap_string(char *sorce);
 char *leet(char *source);
 void print_number(int n);
+void print_square(int size);
