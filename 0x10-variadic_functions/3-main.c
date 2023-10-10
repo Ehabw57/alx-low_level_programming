@@ -1,4 +1,4 @@
-#include "main.h"
+#include "variadic_functions.h"
 
 /**
  * main - check the code
@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    more_numbers();
+    print_all("zceisz", 'B', 3, "hello");
     return (0);
 }
