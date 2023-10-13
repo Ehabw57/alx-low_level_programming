@@ -3,7 +3,7 @@
  * delete_dnodeint_at_index - Deltes a node at indx
  * @head: Head of the dlistint
  * @index: The indx u want to delete
- * Return: 1 if succes 0 if fails
+ * Return: 1 if succes -1 if fails
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -29,5 +29,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		move = move->next;
 	}
 
-	return (0);
+	return (-1);
 }
