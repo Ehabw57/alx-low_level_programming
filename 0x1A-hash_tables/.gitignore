@@ -1,0 +1,29 @@
+# Ignore object files
+*.o
+
+# Ignore executables
+*.exe
+*.out
+
+# Ignore compiled libraries
+*.a
+*.so
+
+# Ignore IDE-specific files and directories
+.vscode/
+.idea/
+
+# Ignore build directories
+build/
+bin/
+
+# Ignore main C files
+*main.c
+
+# Ignore CMake build artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Ignore editor backup files
+*~
