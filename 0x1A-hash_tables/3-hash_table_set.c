@@ -7,11 +7,11 @@
  * @key: The of the value
  * @value: The value of the key
  * Return: 1 if SUCCESS or 0 if FAILS
-*/
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index = 0;
-	hash_node_t *node = NULL;
+	hash_node_t *node = NULL, *move = NULL;
 
 	if (ht == NULL || key == NULL || !strlen(key))
 		return (0);
@@ -25,7 +25,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if ((ht->array)[index] == NULL)
 		node->next = NULL;
 	else
+	{
+		for (move = (ht->array)[index]; move != NULL; move = move->next)
+		{
+			if (strcmp(key, move->key))
+			{
+				free(move->value);
+				free(node);
+				move->value = strdup(value);
+				return (1);
+			}
+		}
 		node->next = (ht->array)[index];
+	}
 
 	(ht->array)[index] = node;
 	node->key = strdup(key);
