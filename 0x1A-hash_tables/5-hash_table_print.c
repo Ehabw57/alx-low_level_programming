@@ -13,8 +13,11 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int index = 0;
 	int printed = 0;
 
+	if (ht == NULL)
+		return;
+
 	putchar('{');
-	for (; ht != NULL && index < ht->size; index++)
+	for (; index < ht->size; index++)
 	{
 		move = (ht->array)[index];
 		for (print = move; print != NULL; print = print->next)
