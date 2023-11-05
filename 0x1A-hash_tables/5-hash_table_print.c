@@ -14,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 	int printed = 0;
 
 	putchar('{');
-	for (move = (ht->array)[index]; index < ht->size; index++)
+	for (; ht != NULL && index < ht->size; index++)
 	{
 		move = (ht->array)[index];
 		for (print = move; print != NULL; print = print->next)
