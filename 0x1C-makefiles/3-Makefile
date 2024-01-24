@@ -7,9 +7,6 @@ RM = rm
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-main.o: main.c m.h
-	$(CC) -c main.c -o main.o
-
 %.o: %.c
 	$(CC) -c $< -o $@
 
